@@ -1,0 +1,32 @@
+<html>
+<body id="tudo">
+</body>
+<script type="text/javascript">
+
+  var titulos = [];
+  var itens = [];
+
+  function adicionar_item(tracking, titulo) {
+    titulos[titulos.length] = titulo;
+    itens[itens.length] = tracking;
+  }
+
+//  adicionar_item('Codigo', 'Explicacao');
+ 
+  adicionar_item('RC006335974CN', 'Biquini preto/branco e nude');
+  adicionar_item('RC398836204CN', 'Biquini preto');
+  adicionar_item('RR464402864KR', 'Bolsa Ana');
+  adicionar_item('RC117973961CN', 'Bolsa Zara Vinho');
+  adicionar_item('RC472711054CN', 'Deal Extreme cabo,pen drive, mini sd');
+  adicionar_item('RC095907036CN', 'Legging preta Ana');
+  adicionar_item('RB818926732CN', 'Carteira Preta Mamis');
+  adicionar_item('RC059556102CN', 'Kipling Amarela');
+  adicionar_item('RC348240459CN', 'Kipling pequena cinza');
+  adicionar_item('RB905000038CN', 'Relogio');
+
+
+  for (var i=0; i<itens.length; i++) {
+    document.getElementById("tudo").innerHTML = document.getElementById("tudo").innerHTML + '<h1>' + titulos[i] + '</h1><iframe src="http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=' + itens[i] + '" width="800" height="200"></iframe><br /><br /><br />'
+  }
+</script>
+</html>
